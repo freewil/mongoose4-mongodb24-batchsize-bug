@@ -23,7 +23,7 @@ Book.collection.drop(function (err) {
     if (err) return console.error('error creating books', err)
 
     // confirm number of docs created
-    const bookCount = Book.count(function (err, count) {
+    Book.count(function (err, count) {
       if (err) return console.error('error getting book count', err)
       console.log('Book count', count)
       assert.equal(count, 1001)
